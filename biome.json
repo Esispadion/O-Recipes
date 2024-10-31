@@ -1,18 +1,5 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
-	"vcs": {
-		"enabled": false,
-		"clientKind": "git",
-		"useIgnoreFile": false
-	},
-	"files": {
-		"ignoreUnknown": false,
-		"ignore": []
-	},
-	"formatter": {
-		"enabled": true,
-		"indentStyle": "space"
-	},
+	"$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
 	"organizeImports": {
 		"enabled": true
 	},
@@ -22,9 +9,8 @@
 			"recommended": true
 		}
 	},
-	"javascript": {
-		"formatter": {
-			"quoteStyle": "double"
-		}
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "space"
 	}
 }

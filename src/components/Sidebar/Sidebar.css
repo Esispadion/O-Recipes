@@ -1,6 +1,17 @@
 .sidebar {
-    background-color: #6d9ebe;
-    height: 100vh;
+    background-color: #209def;
     padding: 1rem;
     min-width: 25%;
+}
+
+.sidebar ul li {
+    margin-bottom: 0.5rem;
+}
+
+.sidebar ul li a {
+    color: #FFF;
+}
+
+.sidebar ul li a.active {
+    color: #222690;
 }

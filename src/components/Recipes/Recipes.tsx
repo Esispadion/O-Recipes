@@ -1,6 +1,7 @@
 import { Button, Card } from 'semantic-ui-react';
 import './Recipes.css'
 import type IRecipe from '../../@types/recipe.d.ts';
+import { Link } from 'react-router-dom';
 
 interface RecipesProps {
   recipes: IRecipe[];
@@ -19,7 +20,9 @@ function Recipes({recipes}: RecipesProps) {
                         image={recipe.thumbnail}
                         header={recipe.title}
                         meta={recipe.difficulty}
-                        description={<Button>Voir la recette</Button>}
+                        extra={<Button>Voir la recette</Button>}
+                        as={Link}
+                        to={`/recipe/${recipe.slug}`}
                     />
                 ))}
             </Card.Group>

@@ -1,5 +1,6 @@
 import './Sidebar.css'
 import type IRecipe from '../../@types/recipe.d.ts';
+import { NavLink } from 'react-router-dom';
 
 interface SidebarProps {
   recipes: IRecipe[];
@@ -7,10 +8,14 @@ interface SidebarProps {
 
 function Sidebar({recipes}: SidebarProps) {
     return( 
-    <div className='sidebar'>
+    <div className="sidebar">
         <ul>
-            {recipes.map(recipe => (
+          <li>
+            <NavLink to='/'>Accueil</NavLink>
+          </li>
+            {recipes.map((recipe) => (
           <li key={recipe.id}>
+            <NavLink to={`/recipe/${recipe.slug}`}>{recipe.title}</NavLink>
           </li>
         ))}
         </ul>
