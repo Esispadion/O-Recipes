@@ -8,6 +8,7 @@ interface RecipePageProps {
 
 export default function RecipePage({ recipes }: RecipePageProps) {
   const { slug } = useParams();
+
   const recipeToDisplay = recipes.find((recipe) => recipe.slug === slug);
 
   if (!recipeToDisplay) {
